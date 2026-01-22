@@ -117,9 +117,9 @@ def generate_report(api_key, client, industry, target, infra_data):
     try:
         # Try latest model first, fallback to standard pro
         try:
-            model = genai.GenerativeModel('gemini-1.5-flash-latest')
+            model = genai.GenerativeModel('gemini-1.5-flash')
         except:
-            model = genai.GenerativeModel('gemini-pro')
+            model = genai.GenerativeModel('gemini-1.5-flash-002')
             
         genai.configure(api_key=api_key)
         
