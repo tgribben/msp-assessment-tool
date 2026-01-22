@@ -42,7 +42,7 @@ raw_notes = st.text_area(
 def generate_report(api_key, client, industry, target, notes):
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-1.5-flash-latest') # Free, fast model
+        model = genai.GenerativeModel('gemini-pro') # Free, fast model
         
         prompt = f"""
         You are a Senior vCISO for a top-tier MSP. 
